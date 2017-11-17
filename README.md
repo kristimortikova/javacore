@@ -1,2 +1,2 @@
 # javacore
-kit
+my first repository
