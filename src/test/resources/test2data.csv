@@ -1,0 +1,3 @@
+argumentA, argumentB, argumentC, expectedResult
+4, 5, 10, 40
+4, -5, 10, 0
