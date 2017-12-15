@@ -45,7 +45,7 @@ public class Program {
                     System.out.println("Continue..");
                 }
             } catch (Exception e) {
-                System.out.println("incorrect value");
+                System.out.println("Incorrect value..");
             }
 
         }
