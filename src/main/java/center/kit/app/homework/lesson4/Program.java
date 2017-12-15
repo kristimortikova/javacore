@@ -15,33 +15,37 @@ public class Program {
             System.out.println("Enter 0 for exit.");
             System.out.println("Enter number:");
             Scanner scanner = new Scanner(System.in);
-            int number = scanner.nextInt();
-            switch (number) {
-                case 1:
-                    Triangle.SideTriangle();
-                    break;
-                case 2:
-                    CircleArea.calculate();
-                    break;
-                case 3:
-                    DefineBigger.Define();
-                    break;
-                case 4:
-                    OddEven.OddOrEven();
-                    break;
-                case 0:
-                    System.out.println("Good Buy!");
-                    break;
-                default:
-                    System.out.println("There isn't such number in menu.");
-                    break;
-            }
+            try {
+                int number = scanner.nextInt();
+                switch (number) {
+                    case 1:
+                        Triangle.SideTriangle();
+                        break;
+                    case 2:
+                        CircleArea.calculate();
+                        break;
+                    case 3:
+                        DefineBigger.Define();
+                        break;
+                    case 4:
+                        OddEven.OddOrEven();
+                        break;
+                    case 0:
+                        System.out.println("Good Buy!");
+                        break;
+                    default:
+                        System.out.println("There isn't such number in menu.");
+                        break;
+                }
 
-            System.out.println(" ");
-            if (number == 0) {
-                break;
-            } else {
-                System.out.println("Continue..");
+                System.out.println(" ");
+                if (number == 0) {
+                    break;
+                } else {
+                    System.out.println("Continue..");
+                }
+            } catch (Exception e) {
+                System.out.println("incorrect value");
             }
 
         }
