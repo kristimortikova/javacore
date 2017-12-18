@@ -2,7 +2,7 @@ package center.kit.app.classwork.lesson7;
 
 public class Palindrome {
     public void Palind() {
-        String palindrome = "1234564321";
+        String palindrome = "12344321";
         boolean isPalindrome = true;
         for (int i = 0; i < palindrome.length() / 2; i++) {
             isPalindrome = isPalindrome && (palindrome.charAt(i) ==
