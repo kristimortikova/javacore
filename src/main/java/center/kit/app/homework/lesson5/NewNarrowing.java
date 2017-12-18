@@ -6,7 +6,7 @@ public class NewNarrowing {
 
     public int narrowing() {
         int int1 = (int) double1;
-        System.out.println(int1);
+        System.out.println("int newNarrowing = " + int1);
         return int1;
     }
 }

@@ -8,4 +8,5 @@ public class NarrowingCasting {
         float1 = (float) double1;
         System.out.print(float1);
     }
+
 }

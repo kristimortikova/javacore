@@ -8,7 +8,7 @@ public class DogSizeTest {
     public void setDogTest() {
         int weight = 12;
         DogSize dogSize = new DogSize();
-        Assert.assertEquals(weight, dogSize.setDog());
+        Assert.assertEquals(weight, dogSize.setDog(56));
 
     }
 }

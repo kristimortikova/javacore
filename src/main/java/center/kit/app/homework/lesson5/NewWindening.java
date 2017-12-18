@@ -12,7 +12,7 @@ public class NewWindening {
         long2 = int2;
         double2 = long2;
         result = double2;
-        System.out.println(result);
+        System.out.println("Widening result: " + result);
         return result;
     }
 }

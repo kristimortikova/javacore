@@ -4,7 +4,7 @@ public class NewTest7 {
     public int Time(int x) {
         int a = 7, b = 8;
         x = a * b;
-        System.out.println(x);
+        System.out.println("x newTest7 = " + x);
         return x;
     }
 }

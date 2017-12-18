@@ -13,7 +13,6 @@ public class Array5 {
                 Arr[i][k] = random.nextInt((90) + 10);
                 System.out.print(Arr[i][k] + ".  ");
             }
-            //System.out.println(Arrays.toString(Arr));
         }
 
     }
