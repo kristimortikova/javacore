@@ -14,7 +14,7 @@ public class CircleArea {
         double radius2 = scanner.nextDouble();
         double circleArea2 = Math.PI * radius2 * radius2;
         System.out.println("Area2 is " + circleArea2);
-        if ((radius > radius2) || (circleArea > circleArea2)) {
+        if ((calculateVerif(radius, radius2)) || (circleArea > circleArea2)) {
             System.out.println("Area1 is bigger " + circleArea);
             System.out.println("Area2 is smaller " + circleArea2);
         } else {
@@ -23,6 +23,10 @@ public class CircleArea {
 
 
         }
+    }
+
+    public static boolean calculateVerif(double radius, double radius2) {
+        return (radius > radius2);
     }
 
 }
