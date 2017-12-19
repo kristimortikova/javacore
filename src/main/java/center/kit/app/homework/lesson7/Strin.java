@@ -38,5 +38,13 @@ public class Strin {
         stringToDisplay.replace(".", "");
         stringToDisplay.trim();
         System.out.println(stringToDisplay.replace("[", ""));
+        char[] charArray = new char[255];
+        for (int i = 0; i < charArray.length; i++) {
+            charArray[i] = (char) i;
+        }
+        System.out.println("Char array: " + Arrays.toString(charArray));
+        int[] someArray = {1, 5, 7, 2, 0};
+        Arrays.sort(someArray);
+        System.out.println("Sorted array: " + Arrays.toString(someArray));
     }
 }
