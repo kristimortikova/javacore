@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.Arrays;
 
 public class ReaderFile1 {
-    public static String readTheFile(String path)
+    public static void readTheFile(String path)
             throws IOException {
         String currentDir = System.getProperty("user.dir");
         String windowsStyle = "dir\\output2.txt";
@@ -14,6 +14,7 @@ public class ReaderFile1 {
         BufferedReader reader = new BufferedReader(
                 new FileReader("C:\\kit\\javacore\\output2.txt"));
         String line;
+        String line2;
 
         try {
             while ((line = reader.readLine()) != null) {
@@ -30,10 +31,17 @@ public class ReaderFile1 {
                         charArray[i / 2] = line.charAt(i);
                     }
                 }
+                line2 = reader.readLine();
+                System.out.println(line2);
                 Arrays.sort(charArray);
+                String windowsStyle1 = "dir\\input2.txt";
+                File file2 = new File(currentDir, windowsStyle1);
+                System.out.println(file2.getCanonicalPath());
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter
                         (new FileOutputStream("C:\\kit\\javacore\\input2.txt")));
                 writer.append(Arrays.toString(charArray));
+                writer.newLine();
+                writer.append(line2);
                 writer.close();
 
 
@@ -43,7 +51,7 @@ public class ReaderFile1 {
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println(" ");
         }
-        return currentDir;
+
     }
 }
 
