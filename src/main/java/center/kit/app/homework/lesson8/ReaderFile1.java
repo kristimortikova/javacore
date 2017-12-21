@@ -43,15 +43,11 @@ public class ReaderFile1 {
                 writer.newLine();
                 writer.append(line2);
                 writer.close();
-
-
                 System.out.println(Arrays.toString(charArray));
-
             }
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println(" ");
         }
-
     }
 }
 
