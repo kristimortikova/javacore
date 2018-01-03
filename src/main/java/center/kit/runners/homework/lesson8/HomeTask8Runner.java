@@ -1,18 +1,19 @@
-package center.kit.runners.homework.lesson7;
+package center.kit.runners.homework.lesson8;
 
-import center.kit.app.homework.lesson7.Palindrome1;
-import center.kit.app.homework.lesson7.Palindrome2and3;
-import center.kit.app.homework.lesson7.Strin;
+import center.kit.app.homework.lesson8.ReadFile2;
+import center.kit.app.homework.lesson8.ReadFile3;
+import center.kit.app.homework.lesson8.ReaderFile1;
 
+import java.io.IOException;
 import java.util.Scanner;
 
-public class HomeTaskRunner {
-    public static void main(String[] args) {
+public class HomeTask8Runner {
+    public static void main(String[] args) throws IOException {
         boolean check;
         while (check = true) {
-            System.out.println("Enter number 1 for to runner the class Strin.");
-            System.out.println("Enter number 2 for to runner the class Palindrome1.");
-            System.out.println("Enter number 3 for to runner the class Palindrome2and3.");
+            System.out.println("Enter number 1 for to runner the class ReadFile1.");
+            System.out.println("Enter number 2 for to runner the class ReadFile2.");
+            System.out.println("Enter number 3 for to runner the class ReadFile3.");
             System.out.println("Enter 0 for exit.");
             System.out.println("Enter number:");
             Scanner scanner = new Scanner(System.in);
@@ -20,14 +21,13 @@ public class HomeTaskRunner {
                 int number = scanner.nextInt();
                 switch (number) {
                     case 1:
-                        Strin.strArr();
+                        ReaderFile1.readTheFile("C:\\kit\\javacore\\output2.txt");
                         break;
                     case 2:
-                        Palindrome1.palind();
+                        ReadFile2.readTheFile("D:\\file.txt");
                         break;
                     case 3:
-                        Palindrome2and3.palind();
-                        break;
+                        ReadFile3.readFile("C:\\kit\\javacore\\output.txt");
                     case 0:
                         System.out.println("Good Buy!");
                         break;
@@ -35,7 +35,6 @@ public class HomeTaskRunner {
                         System.out.println("There isn't such number in menu.");
                         break;
                 }
-                System.out.println(" ");
                 if (number == 0) {
                     break;
                 } else {
@@ -47,3 +46,4 @@ public class HomeTaskRunner {
         }
     }
 }
+
