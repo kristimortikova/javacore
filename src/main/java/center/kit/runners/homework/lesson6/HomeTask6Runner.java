@@ -5,7 +5,7 @@ import center.kit.app.homework.lesson6.*;
 import java.util.Scanner;
 
 public class HomeTask6Runner {
-    public static void main(String[] args) {
+    public static void main() {
         boolean check;
 
         System.out.println("Enter number 1 for to runner the class Array1.");

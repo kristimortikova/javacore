@@ -19,6 +19,7 @@ public class ReadFile3 {
                 (new FileOutputStream("C:\\kit\\javacore\\" + nameFile)));
         System.out.println(file.getCanonicalPath());
         String line;
+        System.out.println("enter new line: ");
         while (check) {
             line = scanner.next();
             switch (line) {
@@ -29,9 +30,9 @@ public class ReadFile3 {
                 default:
                     writer.append(line);
                     writer.newLine();
+                    System.out.println("your string input to the file.");
                     break;
             }
-
         }
         writer.close();
     }

@@ -19,10 +19,12 @@ public class ReadFile2 {
             line = scanner.nextLine();
             if (checkPal(true, line)) {
                 writer.append(line + pal);
+                System.out.println(line + pal);
             } else {
                 writer.append(line + notPal);
+                System.out.println(line + notPal);
             }
-            System.out.println(line);
+
             writer.newLine();
         }
         writer.close();

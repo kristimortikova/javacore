@@ -11,7 +11,8 @@ public class Dinamyc {
         System.out.println(file.getCanonicalPath());
         String firstLine = "The first line";
         String secondLine = "The second line";
-        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C:\\kit\\javacore\\output.txt")));
+        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter
+                (new FileOutputStream("C:\\kit\\javacore\\output.txt")));
         writer.append(firstLine);
         writer.newLine();
         writer.append(secondLine);

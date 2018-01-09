@@ -29,6 +29,8 @@ public class Strin {
             System.out.println();
         }
         char[] charArrayToString = {'a', 'b', 'c', 'd', '#', '3', '.', ' '};
+        System.out.println("char array:" + Arrays.toString(charArrayToString));
+        System.out.println("cHAR array:\n" + Arrays.toString(charArrayToString));
         for (int k = 0; k < charArrayToString.length; k++) {
             stringToDisplay += charArrayToString[k];
         }
@@ -46,5 +48,15 @@ public class Strin {
         int[] someArray = {1, 5, 7, 2, 0};
         Arrays.sort(someArray);
         System.out.println("Sorted array: " + Arrays.toString(someArray));
+        char[] array = {'4', '5', 't', 'v'};
+        System.out.println("t,char:\t" + Arrays.toString(array));
+        System.out.println("b,char:\b" + Arrays.toString(array));
+        System.out.println("r,char:\r" + Arrays.toString(array));
+        System.out.println("n,char:\n" + Arrays.toString(array));
+        System.out.println("char:\'" + Arrays.toString(array));
+        System.out.println("char:\"" + Arrays.toString(array));
+        System.out.println("char:\\" + Arrays.toString(array));
+
+
     }
 }
