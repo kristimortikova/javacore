@@ -1,5 +1,6 @@
 package center.kit.runners.homework.lesson7;
 
+import center.kit.app.homework.lesson7.Lesson7Enum;
 import center.kit.app.homework.lesson7.Palindrome1;
 import center.kit.app.homework.lesson7.Palindrome2and3;
 import center.kit.app.homework.lesson7.Strin;
@@ -8,42 +9,31 @@ import java.util.Scanner;
 
 public class HomeTask7Runner {
     public static void main(String[] args) {
-        boolean check;
-        while (check = true) {
-            System.out.println("Enter number 1 for to runner the class Strin.");
-            System.out.println("Enter number 2 for to runner the class Palindrome1.");
-            System.out.println("Enter number 3 for to runner the class Palindrome2and3.");
-            System.out.println("Enter 0 for exit.");
-            System.out.println("Enter number:");
-            Scanner scanner = new Scanner(System.in);
-            try {
-                int number = scanner.nextInt();
-                switch (number) {
-                    case 1:
-                        Strin.strArr();
-                        break;
-                    case 2:
-                        Palindrome1.palind();
-                        break;
-                    case 3:
-                        Palindrome2and3.palind();
-                        break;
-                    case 0:
-                        System.out.println("Good Buy!");
-                        break;
-                    default:
-                        System.out.println("There isn't such number in menu.");
-                        break;
-                }
-                System.out.println(" ");
-                if (number == 0) {
+        System.out.println("Available items: ");
+        for (Lesson7Enum menu : Lesson7Enum.values()) {
+            System.out.println(menu.getFullName());
+        }
+        System.out.println("Enter any number: one, two, three or exit ");
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.next();
+        if (Lesson7Enum.printType(input)) {
+            Lesson7Enum task = Lesson7Enum.valueOf(input.toUpperCase());
+            switch (task) {
+                case ONE:
+                    Strin.strArr();
                     break;
-                } else {
-                    System.out.println("Continue..");
-                }
-            } catch (Exception e) {
-                System.out.println("Incorrect value..");
+                case TWO:
+                    Palindrome1.palind();
+                    break;
+                case THREE:
+                    Palindrome2and3.palind();
+                    break;
+                case EXIT:
+                    System.out.println("Good Buy!");
+                    break;
             }
+        } else {
+            System.out.println("There isn't such number in menu.\nEnter any number: one, two, three, four or exit ");
         }
     }
 }

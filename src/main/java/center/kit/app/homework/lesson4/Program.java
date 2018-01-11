@@ -4,50 +4,46 @@ import center.kit.app.classwork.lesson5.CircleArea;
 
 import java.util.Scanner;
 
+import static center.kit.app.homework.lesson4.Lesson4Enum.EXIT;
+
 public class Program {
     public static void ProgramMenu() {
         boolean check;
         while (check = true) {
-            System.out.println("Enter number 1 for right-angled triangle program.");
-            System.out.println("Enter number 2 for calculate circle area program.");
-            System.out.println("Enter number 3 to determine which number is bigger or smaller.");
-            System.out.println("Enter number 4 to define an even or odd number.");
-            System.out.println("Enter 0 for exit.");
-            System.out.println("Enter number:");
+            System.out.println("Available items: ");
+            for (Lesson4Enum menu : Lesson4Enum.values()) {
+                System.out.println(menu.getTaskName());
+            }
+            System.out.println("Enter any number: one, two, three or exit ");
             Scanner scanner = new Scanner(System.in);
-            try {
-                int number = scanner.nextInt();
-                switch (number) {
-                    case 1:
+            String input = scanner.next();
+            if (Lesson4Enum.printType(input)) {
+                Lesson4Enum task = Lesson4Enum.valueOf(input.toUpperCase());
+                switch (task) {
+                    case ONE:
                         Triangle.SideTriangle();
                         break;
-                    case 2:
+                    case TWO:
                         CircleArea.calculate();
                         break;
-                    case 3:
+                    case THREE:
                         DefineBigger.Define();
                         break;
-                    case 4:
+                    case FOUR:
                         OddEven.OddOrEven();
                         break;
-                    case 0:
+                    case EXIT:
                         System.out.println("Good Buy!");
-                        break;
-                    default:
-                        System.out.println("There isn't such number in menu.");
                         break;
                 }
 
                 System.out.println(" ");
-                if (number == 0) {
+                if (task == EXIT) {
                     break;
                 } else {
-                    System.out.println("Continue..");
+                    System.out.println("There isn't such number in menu.\nEnter any number: one, two, three, four or exit ");
                 }
-            } catch (Exception e) {
-                System.out.println("Incorrect value..");
             }
-
         }
     }
 }

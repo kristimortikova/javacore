@@ -1,7 +1,5 @@
 package center.kit.runners.homework;
 
-import center.kit.runners.homework.lesson6.HomeTask6Runner;
-
 public enum TaskRunner {
     TASK_RUNNER(4, 6, 7, 8, 9);
     int homeTask4;
@@ -18,8 +16,6 @@ public enum TaskRunner {
         this.homeTask9 = homeTask9;
     }
 
-    public static void main(String[] args) {
-        HomeTask6Runner.main();
 
     }
-}
+
