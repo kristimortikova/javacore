@@ -1,4 +1,4 @@
-package center.kit.runners.homework.Lesson10Runner;
+package center.kit.runners.homework.Lesson10;
 
 import center.kit.app.homework.lesson10.ProgramMenuEnum;
 import center.kit.runners.homework.lesson4.HomeTask4Runner;
